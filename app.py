@@ -1,6 +1,6 @@
 import streamlit as st
 
-# version: v-native-stable
+# version: final-promotion-ready
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
@@ -21,27 +21,21 @@ html, body, [class*="css"] {
 
 .header {
     background: linear-gradient(90deg, #1D4ED8, #2563EB);
-    padding: 32px;
-    border-radius: 18px;
+    padding: 34px;
+    border-radius: 20px;
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 }
 
 .header h1 {
     font-size: 36px;
     font-weight: 800;
+    margin-bottom: 6px;
 }
 
 .header p {
     font-size: 16px;
     opacity: 0.95;
-}
-
-.section-title {
-    font-size: 22px;
-    font-weight: 700;
-    color: #1E3A8A;
-    margin-bottom: 12px;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -69,70 +63,106 @@ with tab1:
     st.markdown("### 🧭 Role & Scope")
     st.markdown("""
     🔹 Technical Architect leading frontend initiatives  
-    🔹 Ownership across design, development, and delivery  
-    🔹 Mentoring teams on scalable and maintainable architecture  
-    🔹 Driving frontend standards and best practices  
+    🔹 Ownership across design, development, and delivery stages  
+    🔹 Supporting teams with architecture, implementation, and problem-solving  
+    🔹 Mentoring developers on scalable, maintainable frontend practices  
+    🔹 Driving frontend standards and best practices across projects  
     """)
 
 # ---------------- TAB 2 ----------------
 with tab2:
     st.markdown("### 🏆 Key Achievements")
     st.markdown("""
-    ✅ Supported projects: Sightseeing, Experiences, Retail, Student Community, Cabs, GV  
-    ✅ Created shared component library for cross-project reuse  
-    ✅ Conducted coding and architecture best-practice sessions  
-    ✅ Reviewed PRs across teams to maintain quality  
-    ✅ Contributor to performance optimization initiatives  
-    ✅ Led technical stabilization during Cabs go-live  
-    ✅ First KPMG project live: Sightseeing (Indigo)  
-    ✅ Introduced Atomic Design, TypeScript, and theming wrapper  
-    ✅ Guided teams on AI-assisted development (Cursor AI)  
+    ✅ Supported multiple projects: **Sightseeing, Experiences, Retail, Student Community, Cabs, GV**  
+
+    ✅ Took initiative to build a **shared component library**, enabling reuse across teams  
+
+    ✅ Conducted team sessions on **coding standards and best practices**  
+
+    ✅ Reviewed PRs across most projects to maintain high code quality  
+
+    ✅ Contributed to the **performance optimization team** by analyzing bottlenecks and guiding implementations  
+
+    ✅ Provided leadership and technical direction during **Cabs go-live**, helping the team overcome critical issues  
+
+    ✅ **Sightseeing (Indigo)** became the first project to go live from KPMG  
+
+    ✅ Introduced **Atomic Design, TypeScript**, and a reusable **theme wrapper**, later shared with other teams  
+
+    ✅ Guided teams in improving **AI-assisted development (Cursor AI)** through reviews and best practices  
     """)
 
-# ---------------- TAB 3 (UNIQUE METRICS) ----------------
+# ---------------- TAB 3 ----------------
 with tab3:
     st.markdown("### 📊 Delivery Impact")
 
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.metric("Avg Daily Bookings", "15+")
+        st.metric("Avg Daily Bookings", "15+", help="Sightseeing project")
 
     with col2:
         st.metric("Projects Supported", "6+")
 
     with col3:
-        st.metric("Certifications", "PMP")
+        st.metric("Certification", "PMP")
 
-    st.info("📌 Metrics reflect direct delivery impact and cross-team contribution.")
+    st.info("📌 Metrics reflect hands-on delivery impact and cross-team contribution.")
 
 # ---------------- TAB 4 ----------------
 with tab4:
     st.markdown("### 📚 Learning & Certifications")
     st.markdown("""
-    🎓 PMP Certified  
-    🤖 Learning Generative AI & Agentic AI  
-    🧠 Understanding AI architectures and enterprise use cases  
-    ⚙️ Applying AI tools to daily work and delivery efficiency  
+    🎓 **PMP Certified**  
+
+    🤖 Actively learning **Generative AI and Agentic AI**  
+
+    🧠 Building understanding of AI architecture, differences, and enterprise use cases  
+
+    ⚙️ Leveraging AI tools in daily work to improve productivity, quality, and decision-making  
     """)
 
 # ---------------- TAB 5 ----------------
 with tab5:
     st.markdown("### 🔮 3-Year Vision")
     st.markdown("""
-    🚀 Move into a Delivery Lead / Delivery Manager role  
-    🚀 Use technical depth to manage risks and estimates  
-    🚀 Communicate technical challenges to stakeholders effectively  
-    🚀 Participate in AI presales and solution shaping  
+    🚀 Transition into a **Delivery Lead / Delivery Manager** role  
+
+    🚀 Use technical depth to identify risks early and provide realistic, challenging estimates  
+
+    🚀 Effectively communicate technical constraints and trade-offs to stakeholders  
+
+    🚀 Actively contribute to **AI presales**, solution shaping, and showcasing AI use cases to clients  
     """)
 
 # ---------------- TAB 6 ----------------
 with tab6:
     st.markdown("### ⬆️ Why I Should Be Promoted")
     st.markdown("""
-    ⭐ Consistently operating beyond current role expectations  
-    ⭐ Trusted during critical delivery phases  
-    ⭐ Strong blend of technical depth and delivery ownership  
-    ⭐ Created reusable assets benefiting multiple teams  
-    ⭐ Actively preparing for leadership and AI-driven initiatives  
+    ⭐ Consistently operating beyond current role expectations and scope  
+
+    ⭐ Trusted during critical delivery phases and high-pressure situations  
+
+    ⭐ **A strong multitasker who thrives in challenging and fast-paced environments while maintaining delivery quality and focus**  
+
+    ⭐ Strong blend of technical depth, delivery ownership, and stakeholder awareness  
+
+    ⭐ Fast learner with a strong belief in **continuous learning and self-upskilling**  
+
+    ⭐ Actively mentoring team members on working smarter, improving productivity, and design thinking  
+
+    ⭐ Proactively encouraging teams to **leverage AI tools** to enhance efficiency and output quality  
+
+    ⭐ Possess sufficient experience, maturity, and judgment to be considered for the **next level role**  
+
+    ⭐ Strong ownership mindset — I take responsibility for outcomes, not just tasks  
+
+    ⭐ Deep belief in **governance and process discipline**  
+    ⭐ Independently set up Jira boards, created tasks, and drove structured execution within the Indigo team  
+
+    ⭐ Consistently encourage teams to follow defined processes while staying delivery-focused and agile  
+
+    ⭐ Created reusable assets and practices that continue to benefit teams beyond my immediate scope  
+
+    ⭐ Actively preparing myself for leadership and AI-driven delivery opportunities  
     """)
