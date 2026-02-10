@@ -163,7 +163,6 @@ with tab6:
         st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown("### Why I Should Be Promoted")
         st.markdown("""
-        - Operating beyond current role expectations
         - Trusted during critical delivery phases
         - Strong mix of technical depth and delivery mindset
         - Created reusable assets benefiting multiple teams
