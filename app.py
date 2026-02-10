@@ -1,220 +1,205 @@
 import streamlit as st
 
-# ================= PAGE CONFIG =================
+# ---------------- PAGE CONFIG ----------------
 st.set_page_config(
-    page_title="Heena | FY Performance Review",
+    page_title="Poonam | FY Performance Review",
+    page_icon="🚀",
     layout="wide"
 )
 
-# ================= CUSTOM CSS =================
+# ---------------- CUSTOM CSS ----------------
 st.markdown("""
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-
-/* Background */
-.stApp {
-    background: linear-gradient(to right, #f8f9fc, #eef2f7);
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
 }
 
-/* Animations */
-@keyframes fadeSlide {
-    0% {opacity: 0; transform: translateY(-20px);}
-    100% {opacity: 1; transform: translateY(0);}
-}
-
-/* Title */
-.main-title {
-    font-size: 48px;
-    font-weight: 800;
-    background: linear-gradient(90deg, #4f46e5, #06b6d4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: fadeSlide 1.2s ease-in-out;
-}
-
-/* Subtitle */
-.sub-title {
-    font-size: 20px;
-    color: #475569;
-    margin-bottom: 30px;
-    animation: fadeSlide 1.6s ease-in-out;
-}
-
-/* Card */
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
-    animation: fadeSlide 0.8s ease-in-out;
-}
-
-/* Section title */
 .section-title {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 700;
     margin-bottom: 15px;
-    color: #1e293b;
+    animation: fadeInUp 1s ease;
 }
 
-/* Metric card */
-.metric-card {
-    background: linear-gradient(135deg, #6366f1, #22d3ee);
-    color: white;
-    padding: 22px;
-    border-radius: 16px;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
 }
 
+.metric {
+    font-size: 34px;
+    font-weight: 700;
+    color: #2E86C1;
+}
+
+.metric-label {
+    font-size: 14px;
+    color: #555;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stTabs [role="tab"] {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 18px;
+}
 </style>
 """, unsafe_allow_html=True)
 
-# ================= HEADER =================
-st.markdown('<div class="main-title">Heena – FY Performance Review</div>', unsafe_allow_html=True)
-st.markdown('<div class="sub-title">Technical Architect | Leadership | Delivery Impact</div>', unsafe_allow_html=True)
+# ---------------- HEADER ----------------
+st.markdown("""
+<div class="section-title">
+🚀 Poonam — FY Performance Review & Growth Journey
+</div>
+""", unsafe_allow_html=True)
 
-# ================= TABS =================
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(
-    [
-        "🧭 Role & Scope",
-        "🚀 Achievements",
-        "📈 Impact",
-        "🎓 Learning",
-        "🔮 3-Year Vision",
-        "⬆️ Promotion Readiness"
-    ]
+st.markdown(
+    "A concise, impact-focused overview of my contributions, growth, and future readiness."
 )
 
-# ================= TAB 1 =================
+# ---------------- TABS ----------------
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+    "🧭 Role & Scope",
+    "🏆 Key Achievements",
+    "📊 Metrics",
+    "📚 Learning & Certifications",
+    "🌱 Improvements",
+    "🚀 Promotion Readiness"
+])
+
+# ---------------- TAB 1 ----------------
 with tab1:
-    st.markdown('<div class="card">', unsafe_allow_html=True)
-    st.markdown('<div class="section-title">Role & Scope</div>', unsafe_allow_html=True)
-    st.write("""
-    **Technical Architect – Frontend**
+    with st.container():
+        st.markdown('<div class="card">', unsafe_allow_html=True)
+        st.markdown("""
+        <div class="section-title">Role & Scope</div>
 
-    - Led and supported multiple frontend projects end-to-end  
-    - Provided technical guidance across all stages of delivery  
-    - Mentored teams to ensure scalability, performance, and code quality  
-    - Defined and enforced architectural standards and best practices across teams
-    """)
-    st.markdown('</div>', unsafe_allow_html=True)
+        <b>Technical Architect – Frontend</b><br><br>
 
-# ================= TAB 2 =================
+        • Led and supported multiple frontend initiatives across delivery lifecycle<br>
+        • Provided architectural guidance, design reviews, and implementation support<br>
+        • Acted as a technical mentor for teams during development and release phases<br>
+        • Ensured alignment to scalability, performance, and maintainability standards
+        """, unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+
+# ---------------- TAB 2 ----------------
 with tab2:
-    st.markdown('<div class="card">', unsafe_allow_html=True)
-    st.markdown('<div class="section-title">Key Achievements</div>', unsafe_allow_html=True)
-    st.write("""
-    - Supported and contributed to multiple projects:
-      **Sightseeing, Experience, Retails, Student Community, Cabs, GV**
-    - Designed and built a **common component library** to enable reuse across projects
-    - Conducted sessions on **best coding practices** and architecture
-    - Regularly reviewed PRs across most projects to ensure quality
-    - Core member of the **Performance Team**:
-        - Analysed performance bottlenecks  
-        - Defined optimization approaches  
-        - Guided teams through implementation
-    - Demonstrated delivery leadership during critical phases:
-        - Supported **Cabs** during go-live issue resolution  
-        - Helped stabilize **Expedia release process**
-    - First KPMG project to go live: **Sightseeing with Indigo**
-    - Introduced strong architectural foundations:
-        - Atomic Design pattern  
-        - TypeScript standardization  
-        - Theme wrapper supporting multiple themes (reused across projects)
-    - Reviewed and improved **Cursor AI–generated code**, guiding teams on better patterns
-    """)
-    st.markdown('</div>', unsafe_allow_html=True)
+    with st.container():
+        st.markdown('<div class="card">', unsafe_allow_html=True)
+        st.markdown("""
+        <div class="section-title">Key Achievements</div>
 
-# ================= TAB 3 =================
+        • Contributed across multiple projects: <b>Sightseeing, Experiences, Retail, Student Community, Cabs, GV</b><br><br>
+
+        • Took initiative to design and build a <b>common component library</b>, enabling faster development and consistency across projects<br><br>
+
+        • Established and conducted sessions on <b>best coding practices</b> and frontend standards<br><br>
+
+        • Actively reviewed PRs across most projects, ensuring high code quality and maintainability<br><br>
+
+        • Core member of the <b>performance optimization initiative</b>, contributing to analysis, improvement strategies, and guiding teams on implementation<br><br>
+
+        • Played a key leadership role during <b>Cabs go-live</b>, helping resolve critical issues and stabilizing delivery under pressure<br><br>
+
+        • Sightseeing (Indigo partnership) was the <b>first project to go live from KPMG</b>, setting the foundation for future deliveries<br><br>
+
+        • Defined architectural best practices such as <b>Atomic Design</b> and <b>TypeScript adoption</b> in new projects like GV<br><br>
+
+        • Designed a <b>theme wrapper</b> to support multiple branding needs, later shared and reused across teams<br><br>
+
+        • Reviewed and guided teams on <b>AI-assisted development (Cursor AI)</b>, improving code quality and efficiency
+        """, unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+
+# ---------------- TAB 3 ----------------
 with tab3:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.markdown('<div class="metric-card">', unsafe_allow_html=True)
-        st.write("📊 Avg Daily Bookings")
-        st.write("15+")
-        st.markdown('</div>', unsafe_allow_html=True)
+        with st.container():
+            st.markdown('<div class="card">', unsafe_allow_html=True)
+            st.markdown('<div class="metric">15+</div>', unsafe_allow_html=True)
+            st.markdown('<div class="metric-label">Average Daily Bookings (Sightseeing)</div>', unsafe_allow_html=True)
+            st.markdown('</div>', unsafe_allow_html=True)
 
     with col2:
+        with st.container():
+            st.markdown('<div class="card">', unsafe_allow_html=True)
+            st.markdown('<div class="metric">6+</div>', unsafe_allow_html=True)
+            st.markdown('<div class="metric-label">Projects Supported</div>', unsafe_allow_html=True)
+            st.markdown('</div>', unsafe_allow_html=True)
+
+# ---------------- TAB 4 ----------------
+with tab4:
+    with st.container():
         st.markdown('<div class="card">', unsafe_allow_html=True)
-        st.markdown('<div class="section-title">Business Impact</div>', unsafe_allow_html=True)
-        st.write("""
-        - Stable production performance post go-live  
-        - Smooth release execution and reduced delivery risk  
-        - Strong architectural foundation for future scaling
-        """)
+        st.markdown("""
+        <div class="section-title">Learning & Certifications</div>
+
+        • <b>PMP Certification</b> – Strengthened delivery, risk management, and stakeholder communication skills<br><br>
+
+        • Actively building expertise in <b>AI and modern architectures</b>, including:
+          – Generative AI vs Agentic AI<br>
+          – AI system architecture and real-world use cases<br><br>
+
+        • Leveraging multiple AI tools in daily work to improve productivity, learning, and solution quality
+        """, unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
-# ================= TAB 4 =================
-with tab4:
-    st.markdown('<div class="card">', unsafe_allow_html=True)
-    st.markdown('<div class="section-title">Learning & Certifications</div>', unsafe_allow_html=True)
-    st.write("""
-    ✅ **PMP Certification – Cleared**
-
-    **AI Upskilling**
-    - Agentic AI vs Generative AI  
-    - AI architecture patterns  
-    - Practical AI use cases
-
-    **Hands-on Application**
-    - Leveraging AI tools to improve daily productivity  
-    - Enhancing solution design and technical decision-making
-    """)
-    st.markdown('</div>', unsafe_allow_html=True)
-
-# ================= TAB 5 =================
+# ---------------- TAB 5 ----------------
 with tab5:
-    st.markdown('<div class="card">', unsafe_allow_html=True)
-    st.markdown('<div class="section-title">3-Year Vision</div>', unsafe_allow_html=True)
-    st.write("""
-    - Grow into a **Delivery Lead / Delivery Manager**
-    - Use technical depth to:
-        - Identify risks early  
-        - Provide realistic and challenging estimates  
-        - Communicate technical issues effectively to stakeholders
-    - Actively contribute to **AI pre-sales**
-    - Showcase AI-driven architectures and use cases to potential clients
-    """)
-    st.markdown('</div>', unsafe_allow_html=True)
+    with st.container():
+        st.markdown('<div class="card">', unsafe_allow_html=True)
+        st.markdown("""
+        <div class="section-title">Improvements & Growth</div>
 
-# ================= TAB 6 =================
+        • Transitioned from individual contributor mindset to <b>team and delivery ownership</b><br><br>
+
+        • Improved ability to guide teams during ambiguity and high-pressure delivery phases<br><br>
+
+        • Strengthened cross-team collaboration and architectural decision-making<br><br>
+
+        • Proactively introduced structure, standards, and reusable assets to improve long-term efficiency
+        """, unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+
+# ---------------- TAB 6 ----------------
 with tab6:
-    st.markdown('<div class="card">', unsafe_allow_html=True)
-    st.markdown('<div class="section-title">Why I Am Ready for Promotion</div>', unsafe_allow_html=True)
-    st.write("""
-    **Operating Beyond Role Expectations**
+    with st.container():
+        st.markdown('<div class="card">', unsafe_allow_html=True)
+        st.markdown("""
+        <div class="section-title">Why I Am Ready for Promotion</div>
 
-    - Consistently supported multiple projects and teams beyond my assigned scope  
-    - Took ownership during critical delivery phases to reduce risk and ensure stability  
-    - Proactively identified and addressed architectural and performance gaps at an organizational level  
+        <b>Leadership & Delivery Ownership</b><br>
+        • Trusted to step in during critical delivery phases such as <b>Cabs go-live</b><br>
+        • Acted as a technical anchor ensuring stability and clarity under pressure<br><br>
 
-    **Leadership & Delivery Impact**
+        <b>Technical Depth with Business Mindset</b><br>
+        • Strong frontend architectural expertise combined with delivery awareness<br>
+        • Ability to assess risks, provide realistic estimates, and communicate trade-offs clearly<br><br>
 
-    - Trusted to step in during high-pressure situations such as **Cabs go-live** and **Expedia release process**  
-    - Acted as a technical anchor during delivery uncertainty  
-    - Balanced delivery timelines with long-term architectural quality  
+        <b>Organizational Impact</b><br>
+        • Created reusable libraries, standards, and frameworks benefiting multiple teams<br>
+        • Elevated overall engineering quality beyond individual projects<br><br>
 
-    **Scaling Impact Across Teams**
-
-    - Built shared component libraries and theme wrappers used across multiple projects  
-    - Established best practices including **Atomic Design, TypeScript, and performance standards**  
-    - Enabled faster development, reduced rework, and consistent quality  
-
-    **Strong Foundation for Delivery Leadership**
-
-    - PMP certified with strong grounding in delivery, planning, and risk management  
-    - Able to translate technical complexity into clear and actionable communication for stakeholders  
-
-    **Future-Ready & Business Aligned**
-
-    - Actively building expertise in **Agentic and Generative AI**  
-    - Exploring AI-led use cases for pre-sales and client engagement  
-
-    **Summary**
-
-    I am already operating as a technical leader with delivery ownership and organizational impact, and I am ready to take on a formal role that reflects this responsibility and value.
-    """)
-    st.markdown('</div>', unsafe_allow_html=True)
+        <b>Future Readiness</b><br>
+        • Actively preparing for <b>Delivery Lead / Delivery Manager</b> responsibilities<br>
+        • Keen to contribute to <b>AI-focused presales</b>, showcasing practical AI use cases to clients
+        """, unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
